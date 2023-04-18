@@ -1,6 +1,6 @@
 const form = document.getElementById('form');
 const amount = document.getElementById('amount');
-const description = document.getElementById('description');
+const descriptions = document.getElementById('description');
 const category = document.getElementById('category');
 const addExpenseBtn = document.getElementById('addBtn');
 const list = document.getElementById('list');
@@ -12,12 +12,12 @@ function addItem(e){
     e.preventDefault();
 
     const amountInput = amount.value;
-    const descriptionInput = description.value;
+    const descriptionInput = descriptions.value;
     const categoryInput = category.value;
 
     const obj ={
         amount : amount.value,
-        description : description.value,
+        description : descriptions.value,
         category : category.value,
     }
 
@@ -53,7 +53,7 @@ function addItem(e){
     editbtn.addEventListener('click',()=>{
         list.removeChild(li);
         amount.value = obj.amount;
-        description.value = obj.description;
+        descriptions.value = obj.description;
         category.value = obj.category;
         localStorage.removeItem(obj.description)
     })
