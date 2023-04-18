@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+      crossorigin="anonymous"
+    />
+    <title>Expense Tracker</title>
+  </head>
+</html>
+<body>
+  <header id="header" class="bg-dark text-white text-center p-4">
+    <h1>Expense Tracker</h1>
+  </header>
+  <div class="container card card-body w-75 mt-2 mb-2">
+    <form id="form">
+      Choose expenseamount:
+      <input type="number" name="amount" id="amount" />
+      Choose description:
+      <select name="description" id="description">
+        <option value=""></option>
+        <option value="fuel">fuel</option>
+        <option value="movie">Movie</option>
+        <option value="rent">Rent</option>
+        <option value="grocery">Grocery</option>
+      </select>
+      Choose a category:
+      <select name="category" id="category">
+        <option></option>
+        <option value="petrol">Petrol</option>
+        <option value="diesel">Diesel</option>
+        <option value="couse">House</option>
+        <option value="cooking">cooking</option>
+        <option value="weekend">Weekend</option>
+      </select>
+      <input
+        type="button"
+        value="Add Expense"
+        id="addBtn"
+        class="btn border border-dark ml-3"
+      />
+    </form>
+  </div>
+  <ul id="list" class="list-group">
+    <li
+      id="list-item"
+      class="list-group-item align-self-center w-75 mb-2 bg-secondary p-3 d-none"
+    >
+      <button class="btn btn-sm float-right delete">Delete</button>
+      <button class="btn btn-sm float-right edit mr-2">Edit</button>
+    </li>
+  </ul>
+  <script src="script.js"></script>
+</body>
