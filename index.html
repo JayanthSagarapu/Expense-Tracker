@@ -18,9 +18,15 @@
     <h1>Expense Tracker</h1>
   </header>
   <div class="container card card-body w-75 mt-2 mb-2">
-    <form id="form">
+    <form
+      id="form"
+      action="#"
+      method="post"
+      onsubmit="addItem(event)"
+      class="align-self-center"
+    >
       Choose expenseamount:
-      <input type="number" name="amount" id="amount" />
+      <input type="number" id="amount" />
       Choose description:
       <input type="text" id="description" />
       Choose a category:
@@ -32,22 +38,19 @@
         <option value="cooking">cooking</option>
         <option value="movie">Movie</option>
       </select>
-      <input
-        type="button"
-        value="Add Expense"
-        id="addBtn"
-        class="btn border border-dark ml-3"
-      />
+      <button value="submit" id="submit" class="btn border border-dark ml-3">
+        Add Expense
+      </button>
     </form>
   </div>
   <ul id="list" class="list-group">
     <li
-      id="list-item"
       class="list-group-item align-self-center w-75 mb-2 bg-secondary p-3 d-none"
     >
       <button class="btn btn-sm float-right delete">Delete</button>
       <button class="btn btn-sm float-right edit mr-2">Edit</button>
     </li>
   </ul>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script> -->
   <script src="script.js"></script>
 </body>
